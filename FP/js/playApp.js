@@ -104,19 +104,9 @@ console.log(scoreData[scoreType]);
   });
 
 
-
-  
-
-
-
-
-
 $(document).ready(function() {
     populateMenu(["appetizers"], "Dairy");
     
-  
-    
-
     $(".menu-button").on("click", function() {
         // Remove the active class from all tabs
         $(".menu-button").removeClass("active");
@@ -145,10 +135,6 @@ $(document).ready(function() {
       }
     });
 
-     
-
-    
-   
   });
 
   
@@ -158,33 +144,5 @@ $(document).ready(function() {
    
 
 
-    // $(".menu-item").click(function() {
-    //     console.log('Clicked menu item');
-    //     var $img = $(this).find('img');
-    //     console.log('Found image:', $img);
-    //     var imgSrc = $img.attr('src');
-    //     console.log(imgSrc);
-        
-    //     var $container = $('#on-plate-image-container');
-    //     if (addedImages.includes(imgSrc)) {
-    //         // Remove image from container and addedImages array
-    //         $container.find('img[src="' + imgSrc + '"]').remove();
-    //         addedImages.splice(addedImages.indexOf(imgSrc), 1);
-    //       } else {
-    //         // Create a new image element and add it to container
-    //         var $newImg = $('<img>', {src: imgSrc, class: 'added-image'});
-    //         $container.append($newImg);
-    //         addedImages.push(imgSrc);
-            
-    //         var containerWidth = $container.width();
-    //         var containerHeight = $container.height();
-    //         var imgWidth = $newImg.width();
-    //         var imgHeight = $newImg.height();
-    //         var posX = Math.floor(Math.random() * (containerWidth - imgWidth));
-    //         var posY = Math.floor(Math.random() * (containerHeight - imgHeight));
-    //         $newImg.css({top: posY, left: posX});
-    //       }
-       
-    //   });
 
     
