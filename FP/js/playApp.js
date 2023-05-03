@@ -17,6 +17,7 @@ function populateMenu(menuType, subCategory) {
       if (item.src.includes(subCategory)) {
         var itemImg = $("<img>", {src: item.src});
         var itemName = $("<p>", {text: item.name});
+        itemImg.attr("alt", item.name);
         var itemDiv = $("<button>", {class: "menu-item","data-name": item.name, "data-score": item.score}).append(itemImg, itemName);
         $("#menu-items").append(itemDiv);
         $(".menu-item").hover(function() {
@@ -32,10 +33,8 @@ function populateMenu(menuType, subCategory) {
 
       var $img = $(this).find('img');
       var $score = $(this).data('score');
-      console.log("score", $score);
-      // console.log('Found image:', $img);
       var imgSrc = $img.attr('src');
-      // console.log(imgSrc);
+
       
       
       if (addedImages.includes(imgSrc)) {
@@ -58,11 +57,6 @@ function populateMenu(menuType, subCategory) {
             currentScoreBar.css({"background-color":"red"});
           } 
 
-          // if (currentScoreWidth > 10) {
-          //   $('.menu-item').prop('disabled', true);
-          //   console.log("disabled");
-          // }
-          
 
           
           var $newImg = $('<img>', {src: imgSrc, class: 'added-image'});
