@@ -41,6 +41,9 @@ function populateMenu(menuType, subCategory) {
           // Remove image from container and addedImages array
           $container.find('img[src="' + imgSrc + '"]').remove();
           addedImages.splice(addedImages.indexOf(imgSrc), 1);
+          currentScoreWidth=0;
+          currentScoreBar.css({"width":0+"px"});
+          $("#current-score").text("Score: "+currentScoreWidth + "/10");
         } else {
           // Create a new image element and add it to container
           currentScoreWidth = currentScoreWidth + $score;
@@ -89,21 +92,19 @@ function populateMenu(menuType, subCategory) {
     
   }
 
-function populateScoreData(){
-  
-
-}
 const params = new URLSearchParams(window.location.search);
-  scoreType = params.get("score");
-  const scoreInfo = scoreData[scoreType];
-  console.log(scoreData[scoreType]);
+scoreType = params.get("score");
+console.log(scoreData[scoreType]);
   $.each(scoreData[scoreType], function(index, value) {
     $(".range").text(scoreType);
     $(".score-range").text("score range: " + value["range"]);
     $(".emission").text(value["emission"]);
     $(".score-description").text(value["description"]);
-    
+  
   });
+
+
+
   
 
 
@@ -144,21 +145,13 @@ $(document).ready(function() {
       }
     });
 
-    $('#next-course-button').on('click', function() {
-      if (currentScoreWidth >= 1 && currentScoreWidth < 4) {
-        // Redirect to outcome page 1
-        nextButton.attr("href", nextButton.attr("href") + "?score=low");
-      } else if (currentScoreWidth >= 4 && currentScoreWidth < 8) {
-        // Redirect to outcome page 2
-        nextButton.attr("href", nextButton.attr("href") + "?score=moderate");
-      } else if (currentScoreWidth >= 8){
-        // Redirect to outcome page 3
-        nextButton.attr("href", nextButton.attr("href") + "?score=high");
-      }
-    });
+     
 
+    
    
   });
+
+  
 
     
     
