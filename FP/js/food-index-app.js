@@ -87,7 +87,7 @@ $(document).ready(function() {
 
       console.log("image:",image);
       var $overlayContent = $("<div>", { class: "overlay-content" });
-      $overlayContent.append($("<img>", {src:"assets/x.png", id:"x"}).css({"width":"30px", "height":"30px", "cursor":"pointer"}).click(function() {
+      $overlayContent.append($("<img>", {src:"../assets/x.png", id:"x"}).css({"width":"30px", "height":"30px", "cursor":"pointer"}).click(function() {
         $overlay.hide();
         $(".grid").show();
       }));

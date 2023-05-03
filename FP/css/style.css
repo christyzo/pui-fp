@@ -143,8 +143,12 @@ body {
   justify-content: space-between;
 }
 
-#navigation-bar img{
+#navigation-bar a{
   width: 10%;
+}
+
+#appetizer-course {
+  color:#c2282a
 }
 
 #menu ul {
@@ -289,7 +293,7 @@ a.current {
 #current-score-bar {
   margin-left:.5rem;
   margin-right:.5rem;
-  width: 10px;
+  width: 0px;
   height:80%;
   background-color:blue;
   border-radius: 30px;
@@ -384,7 +388,7 @@ a.current {
 }
 
 /* next */
-.next{
+#next{
   position: absolute;
   bottom:0;
   right: -10vw;
@@ -398,7 +402,7 @@ a.current {
 
 }
 
-.next:hover{
+#next:hover{
   color: white;
   /* border: 2px solid white; */
   background-color: blue;
@@ -529,8 +533,6 @@ p.overlay-description {
   margin-right:auto;
   width: 50vh;
   height: 50vh;
-  background-color: rgba(0,0,0,0.7);
-  /* display: none; */
   justify-content: center;
   align-items: center;
 }
@@ -539,4 +541,134 @@ p.overlay-description {
   max-width: 40%;
   max-height: 40%;
   margin: auto;
+}
+
+/* score description */
+#score-container {
+  width: 60%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#score-card {
+  background-color: white;
+  border: 2px solid #c2282a;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+#score-container>p {
+  display: inline-block;
+  
+  font-family: "ITC Clearface Std", "IvyPresto Display",serif;
+  font-size: 2rem;
+  color:#c2282a;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+.range {
+  font-size: 4rem;
+  font-style: italic;
+  color: blue;
+}
+
+.score-range {
+  padding-top: 1rem;
+  font-style: italic;
+  color: blue;
+
+}
+
+.emission {
+  margin:1rem;
+  font-size: 6rem;
+  font-weight: bold;
+  color:#c2282a;
+
+}
+
+.score-description {
+  padding: 2rem 8rem;
+  font-family: "Courier", sans-serif;
+  font-size: 1rem;
+  color: blue;
+}
+
+
+#next-course {
+  margin-top: 3rem;
+  border: 2px solid blue;
+  color: blue;
+  padding: 0.5rem 2rem;
+  border-radius: 40px;
+  background-color: white;
+  font-family: "IvyPresto Display", serif;
+  font-size: 1.5rem;
+}
+
+
+#next-course:hover{
+color: white;
+/* border: 2px solid white; */
+background-color: blue;
+
+}
+
+/* info page */
+#info-container {
+  margin-top: 10rem;
+  margin-left:auto;
+  margin-right:auto;
+  width:70%;  
+}
+.info-container-flex {
+  margin: 1rem;
+  display: flex;
+  /* width:50%; */
+  /* background-color: white; */
+  justify-content: space-between;
+}
+
+.info-h2 {
+  font-size: 3rem;
+  font-style: italic;
+  color:#c2282a;
+  margin: 6rem;
+  background-color: white;
+  width: 50%;
+}
+
+.info-card {
+  font-family: "Courier", sans-serif;
+  color:blue;
+  border: 2px solid blue;
+  border-radius: 20px;
+  width:40%;
+  padding: 5rem;
+  background-color: white;
+}
+
+.info-card-list {
+  overflow-wrap: break-word;
+  font-family: "Courier", sans-serif;
+  color:blue;
+  border: 2px solid blue;
+  border-radius: 20px;
+  width:40%;
+  padding: 5rem;
+  background-color: white;
+}
+
+.info-container-flex-column {
+  display: flex;
+  flex-direction: column;
 }

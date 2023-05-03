@@ -95,6 +95,25 @@ function populateMenu(menuType, subCategory) {
     
   }
 
+function populateScoreData(){
+  
+
+}
+const params = new URLSearchParams(window.location.search);
+  scoreType = params.get("score");
+  const scoreInfo = scoreData[scoreType];
+  console.log(scoreData[scoreType]);
+  $.each(scoreData[scoreType], function(index, value) {
+    $(".range").text(scoreType);
+    $(".score-range").text("score range: " + value["range"]);
+    $(".emission").text(value["emission"]);
+    $(".score-description").text(value["description"]);
+    
+  });
+  
+
+
+
 
 
 $(document).ready(function() {
@@ -116,17 +135,31 @@ $(document).ready(function() {
     });
 
     
+    var nextButton = $("#next-button");
 
-    $('.next').on('click', function() {
-      if (currentScoreWidth >= 0 && score <= 5) {
+    $('#next-button').on('click', function() {
+      if (currentScoreWidth >= 1 && currentScoreWidth < 4) {
         // Redirect to outcome page 1
-        window.location.href = "outcome1.html";
-      } else if (score >= 6 && score <= 10) {
+        nextButton.attr("href", nextButton.attr("href") + "?score=low");
+      } else if (currentScoreWidth >= 4 && currentScoreWidth < 8) {
         // Redirect to outcome page 2
-        window.location.href = "outcome2.html";
-      } else {
+        nextButton.attr("href", nextButton.attr("href") + "?score=moderate");
+      } else if (currentScoreWidth >= 8){
         // Redirect to outcome page 3
-        window.location.href = "outcome3.html";
+        nextButton.attr("href", nextButton.attr("href") + "?score=high");
+      }
+    });
+
+    $('#next-course-button').on('click', function() {
+      if (currentScoreWidth >= 1 && currentScoreWidth < 4) {
+        // Redirect to outcome page 1
+        nextButton.attr("href", nextButton.attr("href") + "?score=low");
+      } else if (currentScoreWidth >= 4 && currentScoreWidth < 8) {
+        // Redirect to outcome page 2
+        nextButton.attr("href", nextButton.attr("href") + "?score=moderate");
+      } else if (currentScoreWidth >= 8){
+        // Redirect to outcome page 3
+        nextButton.attr("href", nextButton.attr("href") + "?score=high");
       }
     });
 

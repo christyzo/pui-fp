@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
     <title>Static Template</title>
   </head>
 
   <body>
     <div id="navigation-bar">
-      <img src="assets/logo.png" />
+        <a id=logo href="index.html"><img src="../assets/logo.png"/></a>
       <div id="menu">
         <ul>
           <li><a class="current" href="#">play</a></li>
@@ -21,50 +21,27 @@
       </div>
     </div>
     <div class="course">
-      <p id="appetizer">appetizer</p>
+      <p id="appetizer-course">appetizer</p>
       <div class="dotted"></div>
-      <p id="main">main</p>
+      <p id="main-course">main</p>
       <div class="dotted"></div>
-      <p id="dessert">dessert</p>
+      <p id="dessert-course">dessert</p>
     </div>
-    <div id="container">
-      <div id="center-container">
-        <div id="cutlery">
-          <img id="knife" src="assets/knife.png"/>
-          <img id="plate" src="assets/plate.png"/>
-          <img id="fork" src="assets/fork.png"/>  
-          <button id="restart">Restart</button>
-          <button class="next">Next</button>
-        </div>
-        <div id="bottom-container">
-          <div id="score-bar-container">
-            <div id="current-score-bar" data-score=""></div>
-          </div>
-          <p id="current-score">score: 0/10</p>
-        </div>
-      </div>
-      <div id="menu-container">
-        <div id="menu-buttons">
-          <div class="menu-button active" data-category="Dairy" data-course="appetizer">Dairy</div>
-          <div class="menu-button" data-category="Protein" data-course="appetizer">Protein</div>
-          <div class="menu-button" data-category="Condiment" data-course="appetizer">Condiment</div>
-        </div>
-        <div id="menu-items-container">
-          <div id="menu-items"></div>
-        </div>
-      </div>
-    
-      
-    
-      
 
-      
-      
-     
-      <div id="on-plate-image-container">
-        <img id="enlarged-image" src="">
-      </div>
+    <div id="score-container">
+        <p>Course completed!</p>
+        <div id="score-card">
+            <h2 class="range"></h2>
+            <p class="score-range"></p>
+            <h1 class="emission"></h2>
+            <p class="score-description"></p>
+        </div>
+        <a id="next-course-button" href="index.html"><button id="next-course">Next Course</button></a>
     </div>
+
+    
+
+  
    
     
         
@@ -101,8 +78,8 @@
         </div> -->
        
         
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/itemData.js"></script>
-    <script src="js/playApp.js"></script> 
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/itemData.js"></script>
+    <script src="../js/playApp.js"></script> 
   </body>
 </html>
